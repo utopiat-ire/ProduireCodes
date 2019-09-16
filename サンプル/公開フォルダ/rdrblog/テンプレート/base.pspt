@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-style-Type" content="text/css">
+	<link rel="stylesheet" href="base.css" type="text/css">
+	<title>[タイトル]</title>
+</head>
+<body>
+<div id="top">
+   <div id="header">
+      <h1><a href="[スクリプト]">[見出し]</a></h1>
+      <div id="pr">
+         <p>プロデルで作るブログエンジン。</p>
+      </div>
+      <div id="menu">
+         <ul>
+            <li class="home"><a href="[スクリプト]">ホーム</a></li>
+            <li><a href="[スクリプト]?page=profile">プロフィール</a></li>
+            <li><a href="[スクリプト]?page=link">リンク</a></li>
+            <li><a href="[スクリプト]?mode=search">検索</a></li>
+            <li><a href="[スクリプト]?mode=login">管理</a></li>
+         </ul>
+      </div><!-- menu end -->
+   </div><!-- header end -->
+   <div id="contents">
+      <div id="main">
+[警告メッセージがあれば『<div class="waring">[警告メッセージ]</div>』を表示する][情報メッセージがあれば『<div class="nofity">[情報メッセージ]</div>』を表示する]
+[メインテンプレートを展開したもの]
+      </div><!-- main end -->
+      <div id="sub">
+[「menu.pspt」を展開したもの]
+      </div><!-- sub end -->
+      <div id="totop">
+         <a href="#top">ページのトップへ戻る</a>
+      </div><!-- totop end -->
+   </div><!-- contents end -->
+   <div id="footMenu">
+      <ul>
+         <li><a href="[スクリプト]">サイトマップ</a></li>
+         <li><a href="[スクリプト]">メール</a></li>
+      </ul>
+   </div><!-- footerMenu end -->
+   <div id="footer">
+      <address>Copyright &copy; 2015-2019 Produire Weblog Systems, All Rights Reserved.</address>
+   </div><!-- footer end -->
+</div><!-- top end -->
+</body>
+</html>

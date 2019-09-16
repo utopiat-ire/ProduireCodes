@@ -1,0 +1,22 @@
+<h2>カテゴリの管理</h2>
+	<table>
+		<tr>
+			<th>名称</th>
+		</tr>
+[カテゴリ一覧のすべての「カテゴリ」を『
+		<tr>
+			<td><a href="?mode=category&amp;id=[カテゴリのID]">[カテゴリの名前]</a></td>
+			<td></td>
+		</tr>
+』へ展開したもの]
+	</table>
+[編集カテゴリがなければ『<form method="post">
+	<input type="text" name="name" value="[編集カテゴリの名前]">
+	<input type="submit" name="doadd" value="追加する">
+</form>』を表示する]
+[編集カテゴリがあれば『<form method="post">
+	<input type="hidden" name="id" value="[編集カテゴリのID]">
+	<input type="text" name="name" value="[編集カテゴリの名前]">
+	<input type="submit" name="doedit" value="編集する">
+	<input type="submit" name="doremove" value="削除する">
+</form>』を表示する]

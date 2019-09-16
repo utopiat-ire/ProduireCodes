@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>プロデルWebサーバへようこそ</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">プロデルWebサーバへようこそ</a>
+	</nav>
+	<main role="main" class="container">
+		<h1>プロデルWebサーバへようこそ！</h1>
+		<h2>プロデル 簡易Webサーバについて</h2>
+		<p>プロデル簡易Webサーバを通じて、動的なWebページを作ることができます。</p>
+		<p>プロデルで書かれた動的Webページを動作させるには、<br>
+		「プロデル簡易Webサーバ」または、CGIが動作するWebサーバと「RdrCGI」が必要です。</p>
+		<h2>サンプル一覧</h2>
+		<p><a href="datetime.rdr">日付と時刻の表示</a></p>
+		<p><a href="post.rdr">POST形式フォーム</a></p>
+		<p><a href="info.rdr">リクエスト情報の取得</a></p>
+		<p><a href="guestbook.rdr">簡単なゲストブック</a></p>
+		<p><a href="cookie.rdr">Cookie情報の読み書きテスト</a></p>
+		<p><a href="session.rdr">セッション情報の読み書きテスト</a></p>
+		<p><a href="redirect.rdr">URLのリダイレクト</a></p>
+		<p><a href="contenttype.rdr">Content-Typeの指定(XML形式での送信)</a></p>
+		<p><a href="sendfile.rdr">ファイルのダウンロード</a></p>
+		<p><a href="directorylist.rdr">ファイルリストの表示</a></p>
+		<p><a href="pspt/index.rdr">テンプレートエンジンの利用例</a></p>
+		<p><a href="rdrblog/index.rdr">プロデルなブログ</a></p>
+		<p>※注意　これらのプログラムは、動的Webページ用のサンプルであり、セキュリティに対しての十分な配慮が行われていません。<br>
+		公開サーバで運用する際に、これらのプログラムを用いる場合は、セキュリティ対策を別途行う必要があります。</p>
+		<h2>CGIとして動作させる場合</h2>
+		<p>CGIで動作させる場合は、拡張子をrdrからcgiに変えて、<br>
+		ファイルの先頭にrdrcgi.exeを実行するためのパスを指定してください。</p>
+		<h3>Linux (monoが導入されている環境の場合)</h3>
+		<p>#!/usr/bin/mono /usr/lib/produire-mono/rdrcgi.exe</p>
+		<p>cgiファイルに対して、実行権限を有効にする必要があります。<br>
+		また、ApacheでCGI実行を有効にする必要があります。</p>
+	</div>
+</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

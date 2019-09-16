@@ -1,0 +1,29 @@
+<h2>[対象日記のタイトル]</h2>
+<p style="text-align:right;">[[][対象日記のカテゴリ名][]] [対象日記の日付]</p>
+<p>
+	<pre> [対象日記の本文を無害化したもの]</pre>
+</p>
+
+<hr>
+<h3>コメントをどうぞ</h3>
+<dl>
+[コメント一覧のすべての「対象コメント」を『
+	<dt>[[][対象コメントのID]:[対象コメントの名前][]] [対象コメントの日付]</dt>
+	<dt>[対象コメントの本文を無害化したもの]</dt>
+』へ展開したもの]
+</dl>
+<div>
+	<form method="post">
+		お名前:<input name="name" type="text" size="10" value="[コメント名前]"><br>
+		<textarea name="comment" style="width:450px" rows="3"></textarea><br>
+		パスワード:<input name="pass" type="password" size="5" value="[コメントパスワード]">
+		<input name="docomment" type="submit" value="投稿">
+	</form>
+</div>
+<div>
+	<form method="post">
+		番号:<input name="commentid" type="text" size="3">
+		パスワード:<input name="pass" type="password" size="5">
+		<input name="doremove" type="submit" value="削除">
+	</form>
+</div>

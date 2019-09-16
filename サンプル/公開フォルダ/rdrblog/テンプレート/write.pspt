@@ -1,0 +1,23 @@
+<h2>新しい日記</h2>
+<form method="post">
+	<table>
+		<tr>
+			<td>タイトル<br>
+			<input name="title" type="text"></td>
+		</tr>
+		<tr>
+			<td>カテゴリ<br>
+			<select name="category">
+[カテゴリ一覧のすべての「カテゴリ」を『               <option value="[カテゴリのID]">[カテゴリの名前]</option>
+』へ展開したもの]
+			</select></td>
+		</tr>
+		<tr>
+			<td>本文<br>
+			<textarea name="content" style="width:450px" rows="10"></textarea></td>
+		</tr>
+		<tr>
+			<td><input name="dowrite" type="submit" value="投稿する"></td>
+		</tr>
+	</table>
+</form>

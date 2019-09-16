@@ -1,0 +1,40 @@
+﻿※ウェブアプリ
+プログラム名は、「guestbook.rdr」
+データファイルは、「guestbook.txt」
+もしデータファイルというファイルが存在するなら
+	データは、データファイルから「UTF8」で読み込んだもの
+そうでなければ
+	データは、「」
+もし終わり
+処理モードは、［要求から「mode」という引数を取得したもの］
+説明は、「お名前とメッセージを入れて下さい」
+もし、処理モードが「write」 なら
+	メッセージは、［要求から「message」という引数を取得したもの］
+	お名前は、［要求から「name」という引数を取得したもの］
+	もしメッセージの文字数が0でないなら
+		データは、「[時刻]:[メッセージ]([お名前])<br>[改行][データ]」
+		データファイルへデータを「UTF8」で保存する
+	そうでなければ
+		説明は、「メッセージを入れて下さい」
+	もし終わり
+もし終わり
+
+応答として「<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>プロデルなゲストブック</title>
+</head>
+<body>
+<p>[説明]</p>
+<form action="[プログラム名]" method="POST">
+	お名前：<input type="text" name="name" value="[お名前]"><br>
+	メッセージ：<input type="text" name="message"><br>
+	<input type="hidden" name="mode" value="write">
+	<input type="submit" value=" 投稿する ">
+</form>
+<hr>
+[データ]
+</body>
+</html>
+」を送る

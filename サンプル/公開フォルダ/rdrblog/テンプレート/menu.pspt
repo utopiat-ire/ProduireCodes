@@ -1,0 +1,25 @@
+         <div class="section">
+		<form method="POST">
+			<input type="hidden" name="mode" value="search">
+			<input type="text" name="keyword"size="10"><input name="dosearch" type="submit" value="検索">
+		</form>
+         </div><!-- section end -->
+         <div class="section">
+[表示年月についてカレンダを表示する]
+         </div><!-- section end -->
+         <div class="section">
+            <h2>カテゴリ</h2>
+            <ul>
+[カテゴリ一覧のすべての「カテゴリ」を『               <li><a href="[スクリプト]?cat=[カテゴリのID]">[カテゴリの名前]</a></li>
+』へ展開したもの]
+            </ul>
+         </div><!-- section end -->
+[最近日記一覧があれば『
+         <div class="section">
+            <h2>最近の日記</h2>
+            <ul>
+[最近日記一覧のすべての「日記」を『               <li><a href="[スクリプト]?mode=detail&amp;id=[日記のID]">[日記のタイトル]</a></li>
+』へ展開したもの]
+            </ul>
+         </div><!-- section end -->
+』を表示したもの]

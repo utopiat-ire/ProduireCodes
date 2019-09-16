@@ -1,0 +1,26 @@
+<h2>日記の検索</h2>
+<form method="post">
+	<table>
+		<tr>
+			<td>キーワード<br>
+			<input type="hidden" name="mode" value="search">
+			<input name="keyword" type="text" value="[キーワード]">
+			<input name="dosearch" type="submit" value="検索する"></td>
+		</tr>
+		<tr>
+			<td>カテゴリ<br>
+			<select name="category">
+				<option value="0">すべて</option>
+[カテゴリ一覧のすべての「カテゴリ」を『        	       <option value="[カテゴリのID]">[カテゴリの名前]</option>
+』へ展開したもの]
+			</select></td>
+		</tr>
+	</table>
+</form>
+[日記一覧のすべての「対象日記」を『
+	<h2><a href="?mode=detail&amp;id=[対象日記のID]">[対象日記のタイトル]</a></h2>
+	<p style="text-align:right;">[[][対象日記のカテゴリ名][]] [対象日記の日付]</p>
+	<p>
+		<pre> [対象日記の本文を無害化したもの]</pre>
+	</p>
+』へ展開したもの]

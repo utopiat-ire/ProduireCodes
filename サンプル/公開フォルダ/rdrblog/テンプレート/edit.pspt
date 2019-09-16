@@ -1,0 +1,24 @@
+<h2>日記の編集</h2>
+<form method="post">
+	<input name="id" type="hidden" value="[編集日記のID]">
+	<table>
+		<tr>
+			<td>タイトル<br>
+			<input name="title" type="text" value="[編集日記のタイトル]"></td>
+		</tr>
+		<tr>
+			<td>カテゴリ<br>
+			<select name="category">
+[カテゴリ一覧のすべての「カテゴリ」を『               <option value="[カテゴリのID]"[(カテゴリのIDが選択カテゴリ)で「 select」を展開する]>[カテゴリの名前]</option>
+』へ展開したもの]
+			</select></td>
+		</tr>
+		<tr>
+			<td>本文<br>
+			<textarea name="content" style="width:450px" rows="10">[編集日記の本文]</textarea></td>
+		</tr>
+		<tr>
+			<td><input name="doedit" type="submit" value="編集する"><input name="doremove" type="submit" value="削除する"></td>
+		</tr>
+	</table>
+</form>

@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+/* ---------------------
+ * FONTSIZE MODEL * 
+ * ---------------------
+ *  63% ->	10pxに相当
+ *  70% ->	11pxに相当
+ *  75% ->	12pxに相当
+ *  82% ->	13pxに相当
+ *  88% ->	14pxに相当
+ *  94% ->	15pxに相当
+ * 100% ->	16pxに相当
+ * 107% ->	17pxに相当
+ * 113% ->	18pxに相当
+ * 119% ->	19pxに相当
+ * 125% ->	20pxに相当
+ * --------------------- */
+
+
+/* ========BASIC======== */
+* {
+   font-family: "メイリオ", Meiryo,"MS P ゴシック",verdana,sans-serif,"Hiragino Kaku Gothic Pro",HiraKakuPro-W3,"ヒラギノ角ゴ Pro W3";
+   color:#333;
+}
+
+body {
+   margin:0;
+   padding:0;
+   letter-spacing:1px;
+   background:#21699C;
+	text-align:center;
+}
+
+br {
+   letter-spacing:normal;
+}
+
+a {
+   color:#333;
+   text-decoration:none;
+}
+
+a:hover {
+   color:#666;
+}
+
+img {
+   border:0;
+   vertical-align:bottom;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   margin:0;
+}
+
+/* ========TEMPLATE LAYOUT======== */
+div#top {
+   width:760px;
+   margin:0 auto;
+   padding:10px;
+   background:#F7F3F7;
+	text-align:left;
+}
+
+div#header {
+   position:relative;
+   width:760px;
+   height:150px;
+   background:#7BAAD6 url("images/bg_header_top.gif") 0 0 no-repeat;
+}
+
+div#menu {
+   width:760px;
+   position:absolute;
+   bottom:0;
+   background:#7BAAD6 url("images/bg_header_bottom.gif") 0 100% no-repeat;
+}
+
+
+div#pr {
+   position:absolute;
+   left:360px;
+   top:30px;
+   width:400px;
+}
+
+div#contents {
+   float:left;
+   width:760px;
+   margin-top:10px;
+   background:#fff url("images/bg_contents.gif") 0 0 repeat-y;
+}
+
+div#main {
+   float:left;
+   width:500px;
+   padding:10px;
+   background:#fff url("images/bg_main.gif") 0 0 no-repeat;
+}
+
+div#sub {
+   float:right;
+   width:220px;
+   padding:10px;
+   background:#CACACA url("images/bg_sub.gif") 0 0 no-repeat;
+}
+
+div#totop {
+   clear:both;
+}
+
+div#footMenu {
+   float:left;
+   width:760px;
+   padding-top:10px;
+   background:url("images/bg_contents_footer.gif") 0 0 no-repeat;
+
+}
+div#footer {
+   clear:both;
+   margin:0 5px;
+}
+
+/* ========HEADER CUSTOMIZE======== */
+div#header h1 {
+   margin:0;
+   padding:10px;
+   font-size:200%;/* 32pxに相当 */
+   color:#fff;
+   line-height:1.0;
+}
+
+div#header h1 a {
+   color:#fff;
+}
+
+div#header h1 a:hover {
+   color:#666;
+}
+
+div#header #pr p {
+   margin:0;
+   font-size:75%;/* 12px相当 */
+}
+
+
+/* ========MENU CUSTOMIZE======== */
+div#menu ul {
+   margin:0;
+   padding:0;
+}
+
+div#menu li {
+   float:left;
+   margin:0;
+   padding:10px;
+   font-size:75%;/* 12px相当 */
+   color:#333;
+   list-style-type:none;
+   background:url("images/bg_menu.gif") 0 50% no-repeat;
+}
+
+div#menu li a {
+   color:#333;
+   margin:0 10px;
+}
+
+div#menu li a:hover {
+   color:#fff;
+}
+
+div#menu li.home {
+   background:none;
+}
+
+div#menu li.home a {
+   margin:0 10px 0 0 ;
+}
+
+/* ========MAINCONTENTS CUSTOMIZE======== */
+div#main a {
+   color:#21699C;
+}
+
+div#main a:hover {
+   color:#21699C;
+   border-bottom:1px solid #21699C;
+}
+
+div#main h2 {
+   margin-bottom:8px;
+   padding:2px 2px 2px 0;
+   color:#333;
+   font-size:94%;/* 15px相当 */
+   font-weight:bold;
+   border-bottom:3px double #535D57;
+}
+
+div#main h3 {
+   margin-bottom:3px;
+   font-size:88%;/* 14px相当 */
+}
+
+div#main h4 {
+   margin-bottom:2px;
+   font-size:75%;/* 12px相当 */
+}
+
+div#main h5 {
+   margin-bottom:2px;
+   font-size:75%;/* 12px相当 */
+}
+
+div#main h6 {
+   margin-bottom:2px;
+   font-size:75%;/* 12px相当 */
+}
+
+div#main p {
+   margin:0 0 1em 0;
+   font-size:75%;/* 12px相当 */
+}
+
+div#main div {
+   margin:0 0 1em 0;
+   font-size:75%;/* 12px相当 */
+}
+
+div#main ul,ol,dl {
+   font-size:75%;/* 12px相当 */
+}
+
+div#main dt {
+   margin-bottom:3px;
+}
+
+div#main dd {
+   padding:0;
+   margin:0 0 0.5em 1em;
+   padding:3px;
+   background:#f1f1f1;
+}
+
+div#main div.icatch {
+   margin-bottom:20px;
+}
+
+div.waring {
+   color:red;
+   border:1px;
+}
+
+div.notify {
+   color:red;
+   border:1px;
+}
+
+/* INFORMATION CUSTOMIZE */
+* html body div#main dl.information dd div{
+   display:inline-block;
+}
+
+div#main dl.information dt {
+   float:left;
+   width:10em;
+   margin:0;
+   padding:0;
+}
+
+div#main dl.information dd {
+   margin:0 0 0.5em 10em;
+   padding:0;
+   background:transparent;
+}
+
+
+/* ========SUBCONTENTS CUSTOMIZE======== */
+div#sub .section {
+   margin-bottom:10px;
+}
+
+div#sub h2 {
+   font-size:88%;/* 14px相当 */
+   font-weight:bold;
+}
+
+div#sub ul {
+   margin:0 0 0 5px;
+   padding:0;
+}
+
+div#sub li {
+   padding:5px 0 5px 0;
+   font-size:75%;/* 12px相当 */
+   line-height:1.4;
+   list-style:none;
+}
+
+div#sub li a {
+   display:block;
+   padding-left:12px;
+   background:url("images/bg_list.gif") 0 6px no-repeat;
+}
+
+div#sub table.calendar a {
+   text-decoration:underline;
+}
+
+div#sub table.calendar td {
+   text-align:right;
+}
+
+
+/* ========TOTOP CUSTOMIZE========= */
+div#totop {
+   margin:0 10px;
+   text-align:right;
+   font-size:70%;/* 11px相当 */
+}
+
+div#totop a {
+   padding:0 0 0 12px;
+   background:url("images/bg_totop.gif") 0 50% no-repeat;
+   color:#333;
+}
+
+
+/* ========FOOTMENU CUSTOMIZE======== */
+div#footMenu ul {
+   margin:0;
+   padding:10px 0;
+   text-align:right;
+}
+
+div#footMenu li {
+   display:inline;
+   margin:0 0 0 10px;
+   font-size:70%;/* 11px相当 */
+   list-style:none;
+}
+
+div#footMenu li a {
+   padding-left:10px;
+   background: url("images/bg_footmenu.gif") 0 50% no-repeat;
+}
+
+
+/* ========FOOTER CUSTOMIZE======== */
+address {
+   padding-top:10px;
+   font-style:normal;
+   font-size:70%;/* 11px相当 */
+   text-align:center;
+   background: url("images/bg_dotline.gif") 0 0 repeat-x;
+}
+}

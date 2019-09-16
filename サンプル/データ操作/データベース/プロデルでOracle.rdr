@@ -1,0 +1,86 @@
+﻿// プロデルからOracleデータベースへ接続する例 //
+//Oracle Databaseへ接続するには、Oracle Data Access Components (ODAC)に含まれる
+//「Oracle Data Provider for .NET 2.0」が必要です。
+//動作確認環境: Oracle Database Express Edition 10g
+
+「Produire.Data.Oracle.dll」を利用する
+Oracleというオラクルデータベースを作る
+
+OracleのユーザIDを、「test」に変える
+Oracleのパスワードを、「pass」に変える
+Oracleのデータソースを、「XE」に変える  //Express Editionの場合はXEに固定
+
+//※接続文字列を直接指定することも可能です
+//Oracleの接続文字列を、「User Id=test;Password=pass;Data Source=XE;」に変える
+Oracleへ接続する
+もしOracleの状態が「接続済み」でないなら、終了する
+
+テーブルを作成する
+
+データを取得する
+データを追加する
+データを更新する
+データを削除する
+
+テーブルを破棄する
+
+Oracleから切断する
+
+
+テーブルを、作成する手順
+	ーーテーブルの作成
+	Oracleで「CREATE TABLE 楽曲 (
+		曲名 VARCHAR2(30),
+		アーティスト VARCHAR2(30),
+		アルバムID NUMBER
+	)」を実行する
+終わり
+
+データを、取得する手順
+	ーーデータの取得
+	Oracleから「SELECT 曲名,アーティスト FROM 楽曲」を取得して、結果とする
+	「初期状態」として結果の内容を情報アイコンで表示する
+終わり
+
+データを、追加する手順
+	ーーデータの追加
+	SQL文は、「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (:name, :artist)」
+	バインド値は、｛name=「I am your singer」、artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてOracleで実行して、件数1とする
+
+	バインド値は、｛name=「勝手にシンドバット」、artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてOracleで実行して、件数2とする
+
+	ーー内容の確認
+	Oracleから「SELECT 曲名,アーティスト FROM 楽曲」を取得して、結果とする
+	「追加後」として「［件数1+件数2］件、追加しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+データを、更新する手順
+	ーーデータの更新
+	SQL文は、「UPDATE 楽曲 SET 曲名=:1 WHERE 曲名=:2」
+	バインド値は、｛「I AM YOUR SINGER」、「I am your singer」｝
+	SQL文をバインド値としてOracleで実行して、件数とする
+
+	ーー内容の確認
+	SQL文は、「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=:name」
+	バインド値は、｛name=「I AM YOUR SINGER」｝
+	OracleからSQL文をバインド値として取得して、結果とする
+	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+データを、削除する手順
+	ーーデータの削除
+	SQL文は、「DELETE FROM 楽曲 WHERE アーティスト=:artist」
+	バインド値は、｛artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてOracleで実行して、件数とする
+
+	ーー内容の確認
+	Oracleから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
+	「削除後」として「［件数］件、削除しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+テーブルを、破棄する手順
+	ーーテーブルの破棄
+	Oracleで「DROP TABLE 楽曲」を実行する
+終わり

@@ -1,0 +1,22 @@
+﻿※ウェブアプリ
+メッセージは、［要求から「message」という引数を取得したもの］
+もしメッセージが「」でないなら
+	応答として「message」というセッション項目へメッセージを設定する
+でなければ
+	メッセージを、[要求から「message」というセッション項目を取得したもの]とする
+もし終わり
+
+
+応答として「<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<form action="session.rdr" method="POST">
+	<input type="text" name="message" value="[メッセージ]">
+	<input type="submit" value=" 投稿する ">
+</form>
+<a href="session.rdr">再表示</a>
+</body>
+</html>」を送る

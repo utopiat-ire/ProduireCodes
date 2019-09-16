@@ -1,0 +1,13 @@
+<h2>管理ページログイン</h2>
+<p>(パスワードはadminです)</p>
+<form method="post">
+	<table>
+		<tr>
+			<td>パスワード</td>
+			<td><input name="password" type="password"></td>
+		</tr>
+		<tr>
+			<td><input name="dologin" type="submit" value="ログインする"></td>
+		</tr>
+	</table>
+</form>

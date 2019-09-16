@@ -1,0 +1,88 @@
+﻿// プロデルからMySQLデータベースへ接続する例 //
+//MySQLサーバへ接続するには、MySQL Connector/Netが必要です。
+//動作確認環境: MySQL  5.1.41, MySQL Connector/Net 6.3.5
+
+「Produire.Data.MySQL.dll」を利用する
+MySQLというMySQLデータベースを作る
+
+MySQLのサーバを、「localhost」に変える
+MySQLのユーザIDを、「test」に変える
+MySQLのパスワードを、「pass」に変える
+MySQLの使用データベースを、「test」に変える
+MySQLの文字コードを、「utf8」に変える
+
+//※接続文字列を直接指定することも可能です
+//MySQLの接続文字列を、「server=localhost;User Id=test;password=pass;Charset=utf8」に変える
+
+MySQLへ接続する
+もしMySQLの状態が「接続済み」でないなら、終了する
+
+テーブルを作成する
+
+データを取得する
+データを追加する
+データを更新する
+データを削除する
+
+テーブルを破棄する
+
+MySQLから切断する
+
+
+
+テーブルを、作成する手順
+	ーーテーブルの作成
+	MySQLで「CREATE TABLE `楽曲` (
+		`曲名` VARCHAR(30),
+		`アーティスト` VARCHAR(30),
+		`アルバムID` INTEGER) charset=utf8;」を実行する
+終わり
+
+データを、取得する手順
+	ーーデータの取得
+	MySQLから「SELECT `曲名`,`アーティスト` FROM `楽曲`」を取得して、結果とする
+	「初期状態」として結果の内容を情報アイコンで表示する
+終わり
+
+データを、追加する手順
+	ーーデータの追加
+	SQL文は、「INSERT INTO `楽曲` (`曲名`,`アーティスト`) VALUES (@name,@artist)」
+	バインド値は、｛name=「I am your singer」、artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてMySQLで実行して、件数1とする
+
+	バインド値は、｛name=「勝手にシンドバット」、artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてMySQLで実行して、件数2とする
+
+	ーー内容の確認
+	MySQLから「SELECT `曲名`,`アーティスト` FROM `楽曲`」を取得して、結果とする
+	「追加後」として「［件数1+件数2］件、追加しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+データを、更新する手順
+	ーーデータの更新
+	SQL文は、「UPDATE `楽曲` SET `曲名`=@after WHERE `曲名`=@before」
+	バインド値は、｛before=「I am your singer」、after=「I AM YOUR SINGER」｝
+	SQL文をバインド値としてMySQLで実行して、件数とする
+
+	ーー内容の確認
+	SQL文は、「SELECT `曲名`,`アーティスト` FROM `楽曲` WHERE `曲名`=@name」
+	バインド値は、｛name=「I AM YOUR SINGER」｝
+	SQL文をバインド値としてMySQLから取得して、結果とする
+	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+データを、削除する手順
+	ーーデータの削除
+	SQL文は、「DELETE FROM `楽曲` WHERE `アーティスト`=@artist」
+	バインド値は、｛artist=「サザンオールスターズ」｝
+	SQL文をバインド値としてMySQLで実行して、件数とする
+
+	ーー内容の確認
+	MySQLから「SELECT `曲名`,`アーティスト` FROM `楽曲`」を取得して、結果とする
+	「削除後」として「［件数］件、削除しました。[改行][結果の内容]」を情報アイコンで表示する
+終わり
+
+テーブルを、破棄する手順
+	ーーテーブルの破棄
+	MySQLで「DROP TABLE `楽曲`」を実行する
+終わり

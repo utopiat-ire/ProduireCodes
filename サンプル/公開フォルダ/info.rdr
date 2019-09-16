@@ -1,0 +1,56 @@
+※ウェブアプリ
+パスは、要求から「path」という引数を取得したもの
+
+応答として「<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>リクエスト情報の取得</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbar-brand" href="?">リクエスト情報の取得</a>
+</nav>
+<main role="main" class="container">
+	<h1>引数</h1>
+		<form method="GET">
+			name:<input type="text" name="name">/
+			message:<input type="text" name="message">/
+			<input type="submit" value=" 送信 ">
+		</form>
+		<table class="table table-bordered">
+			<tr><th>キー</th><th>値</th></tr>
+」を送る
+
+要求の引数一覧のすべての要素について、それぞれ繰り返す
+	「<tr><td>[要素]</td><td>[要求から要素という引数を取得]</td></tr>」を応答として送る
+繰り返し終わり
+
+応答として「
+		</table>
+	<h1>リクエスト</h1>
+	<table class="table table-bordered">
+		<tr><td>参照元</td><td>[要求の参照元]</td></tr>
+		<tr><td>ユーザエージェント</td><td>[要求のユーザエージェント]</td></tr>
+		<tr><td>IPアドレス</td><td>[要求のIPアドレス]</td></tr>
+		<tr><td>ホスト名</td><td>[要求のホスト名]</td></tr>
+		<tr><td>要求アドレス</td><td>[要求の要求アドレス]</td></tr>
+		<tr><td>HTTPメソッド</td><td>[要求のHTTPメソッド]</td></tr>
+		<tr><td>エンコード</td><td>[要求のエンコード]</td></tr>
+	</table>
+	<h1>ヘッダ</h1>
+	<table class="table table-bordered">
+」を送る
+要求のヘッダ一覧のすべての要素について、それぞれ繰り返す
+	「<tr><td>[要素]</td><td>[要求から要素というヘッダを取得]</td></tr>」を応答として送る
+繰り返し終わり
+
+応答として「
+	</table>
+</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>」を送る
