@@ -4,7 +4,7 @@
 「Produire.Data.SQLite.dll」を利用する
 SQLiteというSQLiteデータベースを作る
 
-SQLiteのデータソースを、「database.db」に変える
+SQLiteのデータソースを「database.db」に変える
 SQLiteへ接続する
 
 テーブルを作成する
@@ -36,11 +36,11 @@ SQLiteから切断する
 
 データを、追加する手順
 	ーーデータの追加
-	SQL文は、「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (?, ?)」
-	バインド値は、｛「I am your singer」、「サザンオールスターズ」｝
+	SQL文は「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (?, ?)」
+	バインド値は｛「I am your singer」,「サザンオールスターズ」｝
 	SQL文をバインド値としてSQLiteで実行して、件数1とする
 
-	バインド値は、｛「勝手にシンドバット」、「サザンオールスターズ」｝
+	バインド値は｛「勝手にシンドバット」,「サザンオールスターズ」｝
 	SQL文をバインド値としてSQLiteで実行して、件数2とする
 
 	ーー内容の確認
@@ -50,21 +50,21 @@ SQLiteから切断する
 
 データを、更新する手順
 	ーーデータの更新
-	SQL文は、「UPDATE 楽曲 SET 曲名=? WHERE 曲名=?」
-	バインド値は、｛「I AM YOUR SINGER」、「I am your singer」｝
+	SQL文は「UPDATE 楽曲 SET 曲名=? WHERE 曲名=?」
+	バインド値は｛「I AM YOUR SINGER」,「I am your singer」｝
 	SQL文をバインド値としてSQLiteで実行して、件数とする
 
 	ーー内容の確認
-	SQL文は、「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=?」
-	バインド値は、｛「I AM YOUR SINGER」｝
+	SQL文は「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=?」
+	バインド値は｛「I AM YOUR SINGER」｝
 	SQLiteからSQL文をバインド値として取得して、結果とする
 	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
 終わり
 
 データを、削除する手順
 	ーーデータの削除
-	SQL文は、「DELETE FROM 楽曲 WHERE アーティスト=?」
-	バインド値は、｛「サザンオールスターズ」｝
+	SQL文は「DELETE FROM 楽曲 WHERE アーティスト=?」
+	バインド値は｛「サザンオールスターズ」｝
 	SQL文をバインド値としてSQLiteで実行して、件数とする
 
 	ーー内容の確認

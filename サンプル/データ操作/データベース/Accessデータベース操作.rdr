@@ -3,10 +3,10 @@
 //「Microsoft Access データベース エンジン 2010 再頒布可能コンポーネント 」が必要です。
 「Produire.Data.dll」を利用する
 AccessというAccessデータベースを作る
-Accessのデータソースを、「database.mdb」に変える
+Accessのデータソースを「database.mdb」に変える
 
 Accessへ接続する
-もしAccessの状態が「接続済み」でないなら、終了する
+Accessの状態が「接続済み」でないなら、終了する
 
 テーブルを作成する
 
@@ -40,11 +40,11 @@ Accessから切断する
 
 データを、追加する手順
 	ーーデータの追加
-	SQL文は、「INSERT INTO 楽曲 (曲名,アーティスト,価格,発売年) VALUES (?, ?, ?, ?)」
-	バインド値は、｛「I am your singer」、「サザンオールスターズ」、1260、2008｝
+	SQL文は「INSERT INTO 楽曲 (曲名,アーティスト,価格,発売年) VALUES (?, ?, ?, ?)」
+	バインド値は｛「I am your singer」、「サザンオールスターズ」、1260、2008｝
 	SQL文をバインド値としてAccessで実行して、件数1とする
 
-	バインド値は、｛「勝手にシンドバット」、「サザンオールスターズ」、800、1978｝
+	バインド値は｛「勝手にシンドバット」、「サザンオールスターズ」、800、1978｝
 	SQL文をバインド値としてAccessで実行して、件数2とする
 
 	ーー内容の確認
@@ -54,21 +54,21 @@ Accessから切断する
 
 データを、更新する手順
 	ーーデータの更新
-	SQL文は、「UPDATE 楽曲 SET 曲名=? WHERE 曲名=?」
-	バインド値は、｛「I am your singer」、「I AM YOUR SINGER」｝
+	SQL文は「UPDATE 楽曲 SET 曲名=? WHERE 曲名=?」
+	バインド値は｛「I am your singer」、「I AM YOUR SINGER」｝
 	SQL文をバインド値としてAccessで実行して、件数とする
 
 	ーー内容の確認
-	SQL文は、「SELECT 楽曲ID,曲名,アーティスト FROM 楽曲 WHERE 曲名=?」
-	バインド値は、｛「I AM YOUR SINGER」｝
+	SQL文は「SELECT 楽曲ID,曲名,アーティスト FROM 楽曲 WHERE 曲名=?」
+	バインド値は｛「I AM YOUR SINGER」｝
 	AccessからSQL文をバインド値として取得して、結果とする
 	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
 終わり
 
 データを、削除する手順
 	ーーデータの削除
-	SQL文は、「DELETE FROM 楽曲 WHERE 曲名=?」
-	バインド値は、｛「I AM YOUR SINGER」｝
+	SQL文は「DELETE FROM 楽曲 WHERE 曲名=?」
+	バインド値は｛「I AM YOUR SINGER」｝
 	SQL文をバインド値としてAccessで実行して、件数とする
 
 	ーー内容の確認

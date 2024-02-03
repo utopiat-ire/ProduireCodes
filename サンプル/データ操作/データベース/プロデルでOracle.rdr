@@ -6,14 +6,14 @@
 「Produire.Data.Oracle.dll」を利用する
 Oracleというオラクルデータベースを作る
 
-OracleのユーザIDを、「test」に変える
-Oracleのパスワードを、「pass」に変える
-Oracleのデータソースを、「XE」に変える  //Express Editionの場合はXEに固定
+OracleのユーザIDを「test」に変える
+Oracleのパスワードを「pass」に変える
+Oracleのデータソースを「XE」に変える  //Express Editionの場合はXEに固定
 
 //※接続文字列を直接指定することも可能です
 //Oracleの接続文字列を、「User Id=test;Password=pass;Data Source=XE;」に変える
 Oracleへ接続する
-もしOracleの状態が「接続済み」でないなら、終了する
+Oracleの状態が「接続済み」でないなら、終了する
 
 テーブルを作成する
 
@@ -44,11 +44,11 @@ Oracleから切断する
 
 データを、追加する手順
 	ーーデータの追加
-	SQL文は、「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (:name, :artist)」
-	バインド値は、｛name=「I am your singer」、artist=「サザンオールスターズ」｝
+	SQL文は「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (:name, :artist)」
+	バインド値は｛name=「I am your singer」,artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてOracleで実行して、件数1とする
 
-	バインド値は、｛name=「勝手にシンドバット」、artist=「サザンオールスターズ」｝
+	バインド値は｛name=「勝手にシンドバット」,artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてOracleで実行して、件数2とする
 
 	ーー内容の確認
@@ -58,21 +58,21 @@ Oracleから切断する
 
 データを、更新する手順
 	ーーデータの更新
-	SQL文は、「UPDATE 楽曲 SET 曲名=:1 WHERE 曲名=:2」
-	バインド値は、｛「I AM YOUR SINGER」、「I am your singer」｝
+	SQL文は「UPDATE 楽曲 SET 曲名=:1 WHERE 曲名=:2」
+	バインド値は｛「I AM YOUR SINGER」,「I am your singer」｝
 	SQL文をバインド値としてOracleで実行して、件数とする
 
 	ーー内容の確認
-	SQL文は、「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=:name」
-	バインド値は、｛name=「I AM YOUR SINGER」｝
+	SQL文は「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=:name」
+	バインド値は｛name=「I AM YOUR SINGER」｝
 	OracleからSQL文をバインド値として取得して、結果とする
 	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
 終わり
 
 データを、削除する手順
 	ーーデータの削除
-	SQL文は、「DELETE FROM 楽曲 WHERE アーティスト=:artist」
-	バインド値は、｛artist=「サザンオールスターズ」｝
+	SQL文は「DELETE FROM 楽曲 WHERE アーティスト=:artist」
+	バインド値は｛artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてOracleで実行して、件数とする
 
 	ーー内容の確認

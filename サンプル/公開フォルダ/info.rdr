@@ -1,5 +1,5 @@
 ※ウェブアプリ
-パスは、要求から「path」という引数を取得したもの
+要求から「path」という引数を取得してパスとする
 
 応答として「<!DOCTYPE html>
 <html lang="ja">
@@ -38,7 +38,7 @@
 		<tr><td>ホスト名</td><td>[要求のホスト名]</td></tr>
 		<tr><td>要求アドレス</td><td>[要求の要求アドレス]</td></tr>
 		<tr><td>HTTPメソッド</td><td>[要求のHTTPメソッド]</td></tr>
-		<tr><td>エンコード</td><td>[要求のエンコード]</td></tr>
+		<tr><td>文字コード</td><td>[要求の文字コード]</td></tr>
 	</table>
 	<h1>ヘッダ</h1>
 	<table class="table table-bordered">

@@ -1,5 +1,5 @@
 ﻿※ウェブアプリ
-値は、［要求から「message」という引数を取得したもの］
+要求から「message」という引数を取得して値とする
 
 応答として「<!DOCTYPE html>
 <html lang="ja">

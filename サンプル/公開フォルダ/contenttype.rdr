@@ -1,3 +1,3 @@
 ﻿※ウェブアプリ
-応答のContentTypeは、「text/xml」
+応答のContentTypeは「text/xml」
 応答として「<xml>テスト</xml>」を送る

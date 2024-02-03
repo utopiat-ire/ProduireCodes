@@ -1,20 +1,19 @@
 ﻿//プロデルからPostgreSQLデータベースへ接続する例
 //PostgreSQLサーバへ接続するには、Npgsql.dllおよびMono.Security.dllが必要です。
 
-「Produire.Data.PgSql.dll」を利用する
 PostgreSQLというPostgreSQLデータベースを作る
 
-PostgreSQLのサーバを、「localhost」に変える
-PostgreSQLのユーザ名を、「test」に変える
-PostgreSQLのパスワードを、「pass」に変える
-PostgreSQLのポートを、5432に変える
-PostgreSQLの使用データベースを、「test」に変える
+PostgreSQLのサーバを「localhost」に変える
+PostgreSQLのユーザ名を「test」に変える
+PostgreSQLのパスワードを「pass」に変える
+PostgreSQLのポートを5432に変える
+PostgreSQLの使用データベースを「test」に変える
 
 //※接続文字列を直接指定することも可能です
 //PostgreSQLの接続文字列を、「Host=127.0.0.1;Port=5432;Database=test;User Id=test;Password=pass;」に変える
 
 PostgreSQLへ接続する
-もしPostgreSQLの状態が「接続済み」でないなら、終了する
+PostgreSQLの状態が「接続済み」でないなら、終了する
 
 テーブルを作成する
 
@@ -45,11 +44,11 @@ PostgreSQLから切断する
 
 データを、追加する手順
 	ーーデータの追加
-	SQL文は、「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (:name, :artist)」
-	バインド値は、｛name=「I am your singer」、artist=「サザンオールスターズ」｝
+	SQL文は「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (:name, :artist)」
+	バインド値は｛name=「I am your singer」,artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてPostgreSQLで実行して、件数1とする
 
-	バインド値は、｛name=「勝手にシンドバット」、artist=「サザンオールスターズ」｝
+	バインド値は｛name=「勝手にシンドバット」,artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてPostgreSQLで実行して、件数2とする
 
 	ーー内容の確認
@@ -59,21 +58,21 @@ PostgreSQLから切断する
 
 データを、更新する手順
 	ーーデータの更新
-	SQL文は、「UPDATE 楽曲 SET 曲名=:after WHERE 曲名=:before」
-	バインド値は、｛before=「I am your singer」、after=「I AM YOUR SINGER」｝
+	SQL文は「UPDATE 楽曲 SET 曲名=:after WHERE 曲名=:before」
+	バインド値は｛before=「I am your singer」,after=「I AM YOUR SINGER」｝
 	SQL文をバインド値としてPostgreSQLで実行して、件数とする
 
 	ーー内容の確認
-	SQL文は、「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=:name」
-	バインド値は、｛name=「I AM YOUR SINGER」｝
+	SQL文は「SELECT 曲名,アーティスト FROM 楽曲 WHERE 曲名=:name」
+	バインド値は｛name=「I AM YOUR SINGER」｝
 	PostgreSQLからSQL文をバインド値として取得して、結果とする
 	「更新後」として「［件数］件、更新しました。[改行][結果の内容]」を情報アイコンで表示する
 終わり
 
 データを、削除する手順
 	ーーデータの削除
-	SQL文は、「DELETE FROM 楽曲 WHERE アーティスト=:artist」
-	バインド値は、｛artist=「サザンオールスターズ」｝
+	SQL文は「DELETE FROM 楽曲 WHERE アーティスト=:artist」
+	バインド値は｛artist=「サザンオールスターズ」｝
 	SQL文をバインド値としてPostgreSQLで実行して、件数とする
 
 	ーー内容の確認
